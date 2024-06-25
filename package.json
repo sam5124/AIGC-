@@ -10,7 +10,6 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-
     "astro": "^4.6.3",
     "globby": "^14.0.1",
     "mark.js": "^8.11.1",
@@ -24,5 +23,9 @@
     "dayjs": "^1.11.10",
     "lunr": "^2.3.9",
     "sitemap": "^7.1.1"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/sam5124/AIGC-.git",
+  "author": "samli <wy18683037153@163.com>",
+  "license": "MIT"
 }
