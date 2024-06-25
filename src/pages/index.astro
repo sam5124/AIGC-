@@ -9,15 +9,15 @@ interface MarkdownFrontmatter {
   date: number;
 }
 
-const title = 'Creek';
-const description = 'A Theme for Astro';
+const title = 'AIGC提示词';
+const description = '让您生产率翻倍';
 const seoDescription = 'Creek is a theme for Astro static site generator';
 
 const allPosts = await Astro.glob<MarkdownFrontmatter>('./posts/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 ---
 
-<html lang="en">
+<html lang="zh">
 
 <head>
   <BaseHead title={title} description={seoDescription} />
@@ -45,5 +45,3 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valu
 
   <Footer />
 </body>
-
-</html>

@@ -1,85 +1,220 @@
 ---
-title: "Introducing Astro: Ship Less JavaScript"
-description: "We're excited to announce Astro as a new way to build static websites and deliver lightning-fast performance without sacrificing a modern developer experience."
-pubDate: "2021-06-08"
-hero: "/images/introducing-astro.jpg"
+title: "通用大模型提示词"
+description: "整理AIGC中比较通用的提示词，希望对您有帮助！"
+pubDate: "2024-06-25"
+hero: "/images/1.jpg"
 tags: ["astro"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---
+<h2 style="text-align: center;">整理AIGC中比较通用的提示词<br><br>希望对您有帮助！<h2>
+<style>
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  font-size: 1.25em;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: center;
+   line-height: 2.5;
+   background-color: #f0f0f0; /* 浅灰色背景 */
+}
+.card-content {
+  margin-bottom: 8px;
+  line-height: 2.5;
+  
+}
+.card-example {
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 4px;
+}
+</style>
 
-There's a simple secret to building a faster website — _just ship less_.
+<div class="card">
+  <div class="card-title"><strong>信息检索</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 获取特定信息或数据。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“请解释一下[主题]是什么？”</li>
+        <li>“提供有关[主题]的详细信息。”</li>
+        <li>“列出[主题]的主要特点。”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“请解释一下机器学习是什么？”</li>
+          <li>“提供有关量子计算的详细信息。”</li>
+          <li>“列出人工智能的主要特点。”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-Unfortunately, modern web development has been trending in the opposite direction—towards _more._ More JavaScript, more features, more moving parts, and ultimately more complexity needed to keep it all running smoothly.
+<div class="card">
+  <div class="card-title"><strong>内容生成</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 生成文本内容，如文章、故事等。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“撰写一篇关于[主题]的文章。”</li>
+        <li>“写一个关于[主题]的短篇故事。”</li>
+        <li>“为[主题]生成一个引人入胜的开头。”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“撰写一篇关于可持续发展的文章。”</li>
+          <li>“写一个关于时间旅行的短篇故事。”</li>
+          <li>“为人工智能的未来生成一个引人入胜的开头。”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-Today I'm excited to publicly share Astro: a new kind of static site builder that delivers lightning-fast performance with a modern developer experience. To design Astro, we borrowed the best parts of our favorite tools and then added a few innovations of our own, including:
+<div class="card">
+  <div class="card-title"><strong>解释和说明</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 提供对概念、过程或现象的详细解释和说明。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“解释[主题]的工作原理。”</li>
+        <li>“描述[主题]的步骤。”</li>
+        <li>“说明[主题]的原因。”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“解释区块链的工作原理。”</li>
+          <li>“描述制作巧克力蛋糕的步骤。”</li>
+          <li>“说明气候变化的原因。”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-- **Bring Your Own Framework (BYOF):** Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.
-- **100% Static HTML, No JS:** Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.
-- **On-Demand Components:** Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.
-- **Fully-Featured:** Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.
-- **SEO Enabled:** Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.
+<div class="card">
+  <div class="card-title"><strong>比较和对比</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 比较两个或多个项目或概念。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“比较[主题A]和[主题B]。”</li>
+        <li>“列出[主题A]和[主题B]的主要区别。”</li>
+        <li>“说明[主题A]和[主题B]的相似之处和不同之处。”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“比较传统教育和在线教育。”</li>
+          <li>“列出iOS和Android的主要区别。”</li>
+          <li>“说明电动汽车和燃油汽车的相似之处和不同之处。”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-This post marks the first public beta release of Astro. **Missing features and bugs are still to be expected at this early stage.** There are still some months to go before an official 1.0 release, but there are already several fast sites built with Astro in production today. We would love your early feedback as we move towards a v1.0 release later this year.
+<div class="card">
+  <div class="card-title"><strong>建议和指导</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 提供建议、技巧或指导。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“你能给出关于[主题]的建议吗？”</li>
+        <li>“提供一些关于[主题]的实用技巧。”</li>
+        <li>“如何有效地[动作或任务]？”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“你能给出关于学习编程的建议吗？”</li>
+          <li>“提供一些关于时间管理的实用技巧。”</li>
+          <li>“如何有效地准备考试？”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
+<div class="card">
+  <div class="card-title"><strong>解决方案和问题解决</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 提供问题解决方案或步骤。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“如何解决[问题]？”</li>
+        <li>“提出一个[问题]的解决方案。”</li>
+        <li>“解释解决[问题]的步骤。”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“如何解决网络连接问题？”</li>
+          <li>“提出一个减轻交通拥堵的解决方案。”</li>
+          <li>“解释解决软件故障的步骤。”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-## Getting Started
+<div class="card">
+  <div class="card-title"><strong>意见和评价</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 获取对某事物的评价或意见。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“你对[主题]有何看法？”</li>
+        <li>“评价一下[主题]的优缺点。”</li>
+        <li>“你认为[主题]的重要性是什么？”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“你对远程工作的看法是什么？”</li>
+          <li>“评价一下这款新手机的优缺点。”</li>
+          <li>“你认为数据隐私的重要性是什么？”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>
 
-Starting a new project in Astro is easy:
-
-```shell
-# create your project
-mkdir new-project-directory
-cd new-project-directory
-npm init astro
-
-# install your dependencies
-npm install
-
-# start the dev server and open your browser
-npm run dev
-```
-
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides).
-
-## How Astro Works
-
-Astro works a lot like a static site generator. If you have ever used Eleventy, Hugo, or Jekyll (or even a server-side web framework like Rails, Laravel, or Django) then you should feel right at home with Astro.
-
-In Astro, you compose your website using UI components from your favorite JavaScript web framework (React, Svelte, Vue, etc). Astro renders your entire site to static HTML during the build. The result is a fully static website with all JavaScript removed from the final page. No monolithic JavaScript application required, just static HTML that loads as fast as possible in the browser regardless of how many UI components you used to generate it.
-
-Of course, sometimes client-side JavaScript is inevitable. Image carousels, shopping carts, and auto-complete search bars are just a few examples of things that require some JavaScript to run in the browser. This is where Astro really shines: When a component needs some JavaScript, Astro only loads that one component (and any dependencies). The rest of your site continues to exist as static, lightweight HTML.
-
-In other full-stack web frameworks this level of per-component optimization would be impossible without loading the entire page in JavaScript, delaying interactivity. In Astro, this kind of [partial hydration](https://addyosmani.com/blog/rehydration/) is built into the tool itself.
-
-You can even [automatically defer components](https://codepen.io/jonneal/full/ZELvMvw) to only load once they become visible on the page with the `client:visible` directive.
-
-This new approach to web architecture is called [islands architecture](https://jasonformat.com/islands-architecture/). We didn't coin the term, but Astro may have perfected the technique. We are confident that an HTML-first, JavaScript-only-as-needed approach is the best solution for the majority of content-based websites.
-
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides)
-
-## Embracing the Pit of Success
-
-> A well-designed system makes it easy to do the right things and annoying (but not impossible) to do the wrong things<div class="source"><p>– Jeff Atwood</p>[Falling Into The Pit of Success](https://blog.codinghorror.com/falling-into-the-pit-of-success/)</div>
-
-Poor performance is often framed as a failure of the developer, but we respectfully disagree. In many cases, poor performance is a failure of tooling. It should be difficult to build a slow website.
-
-Astro's main design principle is to lead developers into what [Rico Mariani](https://twitter.com/ricomariani) dubbed "the pit of success". It is our goal to build every site "fast by default" while also delivering a familiar, modern developer experience.
-
-By building your site to static HTML by default, Astro makes it difficult (but never impossible 😉) to build a slow site.
-
-## Long-Term Sustainability
-
-Astro is built by the team of open source developers behind [Snowpack](https://snowpack.dev) and [Skypack](https://skypack.dev), with additional contributions from the community.
-
-**Astro is and always will be free.** It is an open source project released under the [MIT license](https://github.com/snowpackjs/astro/blob/main/LICENSE).
-
-We care deeply about building a more sustainable future for open source software. At the same time, we need to support Astro's development long-term. This requires money (donations alone aren't enough.)
-
-We're inspired by the early success of projects like [Tailwind](https://tailwindcss.com/), [Rome](https://rome.tools/), [Remix](https://remix.run/), [Ionic](https://ionicframework.com/), and others who are experimenting with long-term financial sustainability on top of Open Source. Over the next year we'll be exploring how we can create a sustainable business to support a 100% free, open source Astro for years to come.
-
-If your company is as excited about Astro as we are, [we'd love to hear from you.](https://astro.build/chat)
-
-Finally, I'd like to give a **HUGE** thanks to the 300+ developers who joined our earliest private beta. Your feedback has been essential in shaping Astro into the tool it is today. If you're interested in getting involved (or just following along with development) please [join us on Discord.](https://astro.build/chat)
-
-> To learn more about Astro and start building your first site, check out [the project README.](https://github.com/snowpackjs/astro#-guides)
+<div class="card">
+  <div class="card-title"><strong>未来趋势预测</strong></div>
+  <div class="card-content">
+    <strong>用途：</strong> 获取对未来的预测或趋势分析。
+    <ul>
+      <li><strong>问题描述：</strong></li>
+      <ul>
+        <li>“你对[主题]的未来有何预测？”</li>
+        <li>“分析一下[主题]的未来趋势。”</li>
+        <li>“预测[主题]在未来的变化。”</li>
+      </ul>
+      <li><strong>示例：</strong></li>
+      <div class="card-example">
+        <ul>
+          <li>“你对人工智能的未来有何预测？”</li>
+          <li>“分析一下电动汽车的未来趋势。”</li>
+          <li>“预测社交媒体在未来的变化。”</li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+</div>

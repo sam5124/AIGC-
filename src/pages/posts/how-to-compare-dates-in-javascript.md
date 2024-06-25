@@ -1,68 +1,64 @@
 ---
-title: "How to compare dates in JavaScript"
-pubDate: "2020-01-28"
+title: "提示词模版"
+pubDate: "2024-06-25"
 slug: "how-to-compare-dates-in-javascript"
-description: "How to compare dates in JavaScript natively using the Date Object, without using any third-party libraries."
-hero: "/images/javascript-logo-banner.jpg"
+description: "想提问却没有思路？那就来看看吧！"
+hero: "/images/3.webp"
 tags: ["javascript"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---
+---
 
-Working with dates in JavaScript can be tricky to say the least. Recently I needed to compare two dates with one another to see which was greater than, less than, etc.
+### 角色提示
 
-In my particular use case, I was using a date-picker that was returning a string like `01/28/2020`. I needed to see if this date was `>=` to the current day.
+描述: 这种提示类型用于需要模型提供一个清晰具体的角色时。
 
-The first thing I needed to do was convert this string into a JavaScript Date Object.
+模板: "作为[角色]，生成[任务]。"
 
-```js
-const date: new Date("01/28/2020");
-console.log(date);
-// Tue Jan 28 2020 00:00:00 GMT-0500 (Eastern Standard Time)
-```
+---
 
-Then, compare this date with the current day:
+### 标准提示
 
-```js
-const compareDate = new Date("01/28/2020");
-const today = new Date();
-console.log(compareDate >= today);
-// false
-```
+描述: 通过提供一个特定的任务来引导ChatGPT的输出，是一种简单的方法。
 
-The issue is that even though the dates are the same, the times are not.
+模板: "生成一个[任务]。"
 
-```js
-const compareDate = new Date("01/28/2020");
-const today = new Date();
-console.log("compareDate: ", compareDate);
-console.log("today: ", today);
-// compareDate:  Tue Jan 28 2020 00:00:00 GMT-0500 (Eastern Standard Time)
-// today:  Tue Jan 28 2020 21:33:27 GMT-0500 (Eastern Standard Time)
-```
+---
 
-Notice how `compareDate` has all zero's for time. The difference in time is the reason why this comparison fails. To fix this, we need to create the current day without time. We do this by instantiating a new JS Date object by individually passing in the year, month and day.
+### 零、一和少样本提示
 
-```js
-const todayWithoutTime = new Date(
-  new Date().getFullYear(),
-  new Date().getMonth(),
-  new Date().getDate()
-);
-console.log("todayWithoutTime: ", todayWithoutTime);
-// todayWithoutTime:  Tue Jan 28 2020 00:00:00 GMT-0500 (Eastern Standard Time)
-```
+描述: 零样本、一样本和少样本提示是用于从ChatGPT生成文本的技术，最少或没有任何示例。当特定任务需要示例时，可以使用这些提示。
 
-So let's try our comparison again.
+模板: "基于[数量]个示例生成文本。"
 
-```js
-const compareDate = new Date("01/28/2020");
-const todayWithoutTime = new Date(
-  new Date().getFullYear(),
-  new Date().getMonth(),
-  new Date().getDate()
-);
-console.log(compareDate >= todayWithoutTime);
-// true
-```
+---
 
-That's it. Just remember that when comparing dates in JavaScript it is vital to factor in the time. 😎
+### 让我们思考一下提示
+
+描述: "让我们思考一下"提示是一种技巧，可鼓励ChatGPT生成反思和思考性的文本。这种技术适用于撰写复杂的主题或问题。
+
+模板: "让我们思考一下'[在此插入一个主题或问题]'。"
+
+---
+
+### 对话提示
+
+描述: 这种提示类型用于生成模拟对话或对话场景。
+
+模板: "生成一个关于[话题]的对话，角色包括[角色A]和[角色B]。"
+
+---
+
+### 教学提示
+
+描述: 这种提示类型用于生成教学内容或解释某个概念。
+
+模板: "解释[概念]的基本原理，并提供一个简单的例子。"
+
+---
+
+### 故事提示
+
+描述: 这种提示类型用于生成创意故事或叙述。
+
+模板: "写一个关于[主题]的短篇故事，包含[元素]。"
