@@ -4,4 +4,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [sitemap()],
   site: "https://astro-theme-creek.netlify.app/",
+  logging: {
+    level: 'debug'
+  }
 });
